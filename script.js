@@ -33,7 +33,7 @@ adduserbtn.addEventListener("click", () => {
   count++;
 
   td1.textContent = count;
-  td3.textContent = userName.value
+  td2.textContent = userName.value
   td3.textContent = userEmail.value;
   td4.textContent = userMobile.value;
   td5.innerHTML = `
