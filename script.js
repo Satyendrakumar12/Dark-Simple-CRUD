@@ -52,6 +52,7 @@ adduserbtn.addEventListener("click", () => {
   // tdName.textContent = userName.value;
   // tdEmail.textContent = userEmail.value;
   // tdMobile.textContent = userMobile.value;
+  form.reset()
 });
 
 adduserClean.addEventListener("click", () => {
