@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Project</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Navbar -->
+        <header class="navbar">
+
+            <a href="#" class="mysite">My<span>Site</span></a>
+
+            <nav class="myp">
+                <a href="#home">Home</a>
+                <a href="#users">Users</a>
+                <a href="#games">Games</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <!-- Theme Buttons -->
+            <div class="darknight">
+                <button class="lightbtn" aria-label="Light Mode">
+                    <i class="ri-sun-line"></i>
+                </button>
+
+                <button class="darkbtn" aria-label="Dark Mode">
+                    <i class="ri-moon-line"></i>
+                </button>
+            </div>
+
+        </header>
+
+        <!-- Hero Section -->
+        <main>
+
+            <section class="main" id="home">
+
+                <div class="mainOne">
+                    <div class="mainOneContent">
+                        <h1>Welcome to</h1>
+                        <h1>My <span>JavaScript</span> Project</h1>
+
+                        <p>A collection of my JavaScript mini projects.</p>
+                        <p>Explore Theme Toggle, User CRUD, Magic Tiles and Memory Game.</p>
+
+                        <a href="#features" class="mainOnebtn">
+                            Get Started
+                            <i class="ri-arrow-right-circle-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mainTwo">
+                    <img src="image/sideimg.png" alt="JavaScript Illustration">
+                </div>
+
+            </section>
+
+            <!-- Features Section -->
+            <section class="features" id="features">
+
+                <article class="card" id="theme">
+                    <i class="ri-moon-clear-line"></i>
+                    <div class="cardContent">
+                        <h3>Theme Toggle</h3>
+                        <p>Switch between Light and Dark Mode.</p>
+                    </div>
+                </article>
+
+                <article class="card" id="users">
+                    <i class="ri-group-line"></i>
+                    <div class="cardContent">
+                        <h3>User CRUD</h3>
+                        <p>Add, edit and delete users.</p>
+                    </div>
+                </article>
+
+                <article class="card" id="magic-tiles">
+                    <i class="ri-grid-line"></i>
+                    <div class="cardContent">
+                        <h3>Magic Tiles</h3>
+                        <p>Enjoy the Magic Tiles game.</p>
+                    </div>
+                </article>
+
+                <article class="card" id="games">
+                    <i class="ri-gamepad-line"></i>
+                    <div class="cardContent">
+                        <h3>Memory Game</h3>
+                        <p>Test your memory with this game.</p>
+                    </div>
+                </article>
+
+            </section>
+
+        </main>
+
+        <section class="crud">
+            <div class="addEdit">
+                <h1>Add / Edit User</h1>
+                <div class="inputBox">
+
+                    <i class="ri-user-line"></i>
+                    <input id="userName" type="text" placeholder="Enter name">
+
+                </div>
+
+                <div class="inputBox">
+
+                    <i class="ri-mail-line"></i>
+                    <input aria-required="true" id="userEmail" type="email" placeholder="Enter email">
+
+                </div>
+
+                <div class="inputBox">
+
+                    <i class="ri-phone-line"></i>
+                    <input id="userMobile" type="tel" placeholder="Enter phone">
+
+                </div>
+
+                <div class="adduser">
+                    <p id="adduserbtn"><i class="ri-add-large-fill"></i> Add User</p>
+                    <p id="adduserbtnClear"> <i class="ri-refresh-line"></i> Clear</p>
+                </div>
+            </div>
+
+            <div class="userList">
+
+                <!-- User List Header -->
+                <div class="userListHeader">
+
+                    <h1>Users List</h1>
+
+                    <div class="userSearchBox">
+                        <i class="ri-search-line"></i>
+
+                        <input type="search" placeholder="Search user..." aria-label="Search users">
+                    </div>
+
+                </div>
+
+
+                <!-- Users Table -->
+                <div class="tableWrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="userTableBox">
+
+                            <!-- <tr>
+                                <td id="tdNumber">1</td>
+                                <td id="tdName">Satya</td>
+                                <td id="tdEmail">satya@gmail.com</td>
+                                <td id="tdMobile">9876543210</td>
+
+                                <td>
+                                    <div class="actionButtons">
+
+                                        <button class="editBtn" type="button" aria-label="Edit Satya">
+                                            <i class="ri-edit-line"></i>
+                                        </button>
+
+                                        <button class="deleteBtn" type="button" aria-label="Delete Satya">
+                                            <i class="ri-delete-bin-line"></i>
+                                        </button>
+
+                                    </div>
+                                </td>
+                            </tr>tr -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="about">
+            <p>My JavaScript Project</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

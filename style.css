@@ -1,0 +1,398 @@
+
+ /* =================================
+   1. LIGHT MODE COLORS
+================================= */
+
+:root {
+  --bg-color: #f4f2fa;
+  --surface-color: #ffffff;
+
+  --text-color: #17172b;
+  --muted-color: #666677;
+
+  --border-color: #e5e2ee;
+  --accent-color: #7045e8;
+}
+
+/* =================================
+   2. DARK MODE COLORS
+================================= */
+
+.page.dark-theme {
+  --bg-color: #171526;
+  --surface-color: #242136;
+
+  --text-color: #ffffff;
+  --muted-color: #c3bfd2;
+
+  --border-color: #39334e;
+  --accent-color: #a78bfa;
+}
+
+/* =================================
+   3. COMMON CSS
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =================================
+   4. NAVBAR
+================================= */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 8%;
+
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mysite {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.mysite span {
+  color: var(--accent-color);
+}
+
+.myp {
+  display: flex;
+  gap: 20px;
+}
+
+.myp a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.myp a:hover {
+  color: var(--accent-color);
+}
+
+/* =================================
+   5. THEME BUTTONS
+================================= */
+
+.darknight {
+  display: flex;
+  gap: 5px;
+}
+
+.darknight button {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  background-color: var(--surface-color);
+  color: var(--text-color);
+
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* =================================
+   6. HERO SECTION
+================================= */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 60px 8%;
+  gap: 30px;
+}
+
+.mainOne {
+  width: 55%;
+}
+
+.mainOneContent h1 {
+  font-size: 42px;
+  color: var(--text-color);
+}
+
+.mainOneContent h1 span {
+  color: var(--accent-color);
+}
+
+.mainOneContent p {
+  margin-top: 15px;
+  color: var(--muted-color);
+  line-height: 1.2;
+}
+
+.mainOnebtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 25px;
+  padding: 13px 22px;
+
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  color: white;
+
+  text-decoration: none;
+}
+
+.mainTwo {
+  width: 45%;
+}
+
+.mainTwo img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+}
+
+/* =================================
+   7. FEATURE CARDS
+================================= */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+
+  padding: 40px 8%;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 25px;
+
+  background-color: var(--surface-color);
+  color: var(--text-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.card > i {
+  font-size: 35px;
+  color: var(--accent-color);
+}
+
+.cardContent h3 {
+  color: var(--text-color);
+}
+
+.cardContent p {
+  margin-top: 8px;
+  color: var(--muted-color);
+}
+
+/* =================================
+   8. FOOTER
+================================= */
+
+footer {
+  padding: 25px;
+  text-align: center;
+
+  background-color: var(--surface-color);
+  color: var(--muted-color);
+
+  border-top: 1px solid var(--border-color);
+}
+
+/* ----------------
+    User CRUD 
+---------------- */
+
+.crud {
+  width: 85%;
+  /* background-color: #39334e; */
+  display: flex;
+  gap: 10px;
+}
+
+.addEdit {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: var(--surface-color);
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.addEdit h1 {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.inputBox {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.inputBox input {
+  background-color: var(--surface-color);
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.adduser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+#adduserbtn {
+  color: white;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.userList {
+  background-color: var(--surface-color);
+  width: 75%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.userListHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.userListHeader h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.userListHeader input {
+  padding: 5px;
+  outline: none;
+}
+
+.userSearchBox {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.userSearchBox input {
+  background-color: var(--surface-color);
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.userSearchBox i {
+  font-size: 20px;
+  color: var(--muted-color);
+}
+
+/* Table */
+
+.userList table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.userList th,
+.userList td {
+  padding: 5px;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.userList th {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.userList td {
+  color: var(--muted-color);
+}
+
+/* Action Buttons */
+.editBtn,
+.deleteBtn {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 8px;
+    text-align: center;
+  }
+
+.editBtn {
+    background-color: #7045e8;
+    color: white;
+}
+
+.deleteBtn {
+    background-color: #e5484d;
+    color: white;
+}
+
+.error {
+    border: 1px solid red !important;
+}
