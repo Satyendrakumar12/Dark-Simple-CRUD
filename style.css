@@ -1,5 +1,4 @@
-
- /* =================================
+/* =================================
    1. LIGHT MODE COLORS
 ================================= */
 
@@ -236,13 +235,20 @@ body {
 footer {
   padding: 25px;
   text-align: center;
-
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
   background-color: var(--surface-color);
   color: var(--muted-color);
 
   border-top: 1px solid var(--border-color);
 }
 
+#about{
+  width: 100%;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 /* ----------------
     User CRUD 
 ---------------- */
@@ -373,26 +379,109 @@ footer {
 /* Action Buttons */
 .editBtn,
 .deleteBtn {
-    width: 25px;
-    height: 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    margin-right: 8px;
-    text-align: center;
-  }
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 8px;
+  text-align: center;
+}
 
 .editBtn {
-    background-color: #7045e8;
-    color: white;
+  background-color: #7045e8;
+  color: white;
 }
 
 .deleteBtn {
-    background-color: #e5484d;
-    color: white;
+  background-color: #e5484d;
+  color: white;
 }
 
 .error {
-    border: 1px solid red !important;
+  border: 1px solid red !important;
+}
+
+/* // Color Generate */
+
+.color{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 85%;
+  min-height: 100%;
+  margin: 20px 0px;
+  background-color: var(--surface-color);
+  border-radius: 10px;
+}
+
+.color h1{
+  padding: 10px;
+}
+ 
+.color .head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.color .ihead{
+  font-size: 35px;
+
+}
+
+.color p{
+  padding-bottom: 15px;
+  color: #666677;
+  line-height: 25px;
+}
+
+.colorContainer{
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.colorCard{
+  width: 200px;
+  height: 150px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+
+.cardFeatures {
+  border-radius: 10px;
+  background-color: rgb(222, 201, 94);
+  display: flex;
+  justify-content: space-between;
+  text-align: end;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  padding-bottom: 5px;
+  gap: 5px;
+}
+
+.cardFeatures span {
+  display: flex;
+  align-items: center;
+  /* gap: 6px; */
+  font-size: 11px;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.cardFeatures i {
+  font-size: 15px;
 }

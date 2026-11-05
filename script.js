@@ -28,12 +28,12 @@ adduserbtn.addEventListener("click", () => {
   let td2 = document.createElement("td");
   let td3 = document.createElement("td");
   let td4 = document.createElement("td");
-  let td5 = document.createElement("td"); 
+  let td5 = document.createElement("td");
 
   count++;
 
   td1.textContent = count;
-  td2.textContent = userName.value
+  td2.textContent = userName.value;
   td3.textContent = userEmail.value;
   td4.textContent = userMobile.value;
   td5.innerHTML = `
@@ -52,7 +52,7 @@ adduserbtn.addEventListener("click", () => {
   // tdName.textContent = userName.value;
   // tdEmail.textContent = userEmail.value;
   // tdMobile.textContent = userMobile.value;
-  form.reset()
+  form.reset();
 });
 
 adduserClean.addEventListener("click", () => {
@@ -60,3 +60,26 @@ adduserClean.addEventListener("click", () => {
   userEmail.value = "";
   userMobile.value = "";
 });
+
+// Color Generate
+
+let colorCard = document.querySelectorAll(".colorCard");
+
+colorCard.forEach((card)=>{
+
+  let colorBtn = card.querySelector("#randomColor");
+  let copyCode = card.querySelector("#copy");
+  let cards = card.querySelector(".cardFeatures");
+  
+  colorBtn.addEventListener("click", () => {
+    let randomColors = Math.floor(Math.random() * 16777215);
+  
+    let hexColor = "#" + randomColors.toString(16).padStart(6, "0");
+  
+    cards.style.backgroundColor = hexColor;
+    cards.classList.add(hexColor)
+    copyCode.textContent = hexColor;
+  
+    console.log(hexColor);
+  });
+})
